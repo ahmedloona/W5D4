@@ -48,10 +48,9 @@ function fibonacci(n){
 function deepDup(arr){
   // debugger
   const ret = [];
-  for(i=0;i < arr.length;i++){
+  for(let i=0;i < arr.length;i++){
     if(Array.isArray(arr[i])){
-      let res = deepDup(arr[i]);
-      ret.push(res);
+      ret.push(deepDup(arr[i]));
     }
     else{
       ret.push(arr[i]);
